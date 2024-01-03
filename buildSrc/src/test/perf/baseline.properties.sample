@@ -1,6 +1,6 @@
 # General Settings
 uportal.protocol=http
-uportal.domain=localhost
+uportal.domain=portal.ouk.ac.ke
 uportal.port=8080
 uportal.context=uPortal
 
