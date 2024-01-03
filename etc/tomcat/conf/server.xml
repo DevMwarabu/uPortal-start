@@ -69,6 +69,12 @@
     <Connector port="8080" protocol="HTTP/1.1"
                connectionTimeout="20000"
                redirectPort="8443"
+               scheme="https"
+               secure="true"
+               sslProtocol="TLS"
+               keystoreFile="conf/keystore.jks"
+               keystorePass="qwerty"
+               clientAuth="false"
                maxThreads="1200"
                compression="on"
                compressionMinSize="1024"
@@ -90,14 +96,14 @@
          Either JSSE or OpenSSL style configuration may be used regardless of
          the SSLImplementation selected. JSSE style configuration is used below.
     -->
-
+    <!--
     <Connector port="8443" protocol="org.apache.coyote.http11.Http11NioProtocol"
                maxThreads="150" SSLEnabled="true">
         <SSLHostConfig>
             <Certificate certificateKeystoreFile="conf/keystore.jks"
                          type="RSA" />
         </SSLHostConfig>
-    </Connector>
+    </Connector> -->
 
     <!-- Define a SSL/TLS HTTP/1.1 Connector on port 8443 with HTTP/2
          This connector uses the APR/native implementation which always uses
